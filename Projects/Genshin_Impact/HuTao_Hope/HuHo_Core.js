@@ -1,7 +1,7 @@
 
 
 //  Обозначающие переменные
-var app_version = "0.1 SimpleBeta";
+var app_version = "1.0";
 var name_app = "HuTao Hope";
 var title_final = name_app +" "+ app_version;
 //  ---
@@ -48,7 +48,7 @@ function update(){
 	numb.on("child_added", function(snap) {
 		console.log(snap.val())
 		alls = snap.val();
-		$('#allsed').text("За хутао помолилось: " + alls + " человек");
+		$('#allsed').text(alls + " Раз");
 		snap.forEach(function(childSnapshot) {
 		  var key = childSnapshot.key();
 		  var childData = childSnapshot.val();
@@ -56,7 +56,7 @@ function update(){
 	  });
 
 	//  Обновляем текст
-	 $('#allsed').text("За хутао помолилось: " + alls + " человек");
+	 $('#allsed').text(alls + " Раз");
 }
 
 window.onload = function(){ // Функция при старте страницы 
