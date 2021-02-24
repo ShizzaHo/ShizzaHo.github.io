@@ -83,6 +83,8 @@ body{
 
     vertical-align:bottom;
     vertical-align:baseline;
+
+    animation: slideInLeft 1s;
 }
 
 .Info_Button{
@@ -104,4 +106,14 @@ body{
 
     vertical-align:bottom;
     vertical-align:baseline;
+
+    animation: slideInRight 1s;
+}
+
+.fadein{
+    animation: fadeIn 3s;
+}
+
+.alll{
+    animation: fadeInUp 1s;
 }

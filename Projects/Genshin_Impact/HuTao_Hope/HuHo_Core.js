@@ -31,6 +31,7 @@ var firebaseConfig = {
 
 
 var alls = 0; // Локальное кольво молитв
+var first_start = new Boolean(false); // Проверка загрузки странциы [ Костыль :) ]
 
 function add(){
 	//  Добавляем
@@ -41,14 +42,23 @@ function add(){
 	
 	//  Вызываем обновление
 	update();
+
+	// Блокируем кнопку
+	locked_button();
 }
 
 function update(){
 	//  Получаем количество молитв из бд
 	numb.on("child_added", function(snap) {
-		console.log(snap.val())
+		//console.log(snap.val())
 		alls = snap.val();
 		$('#allsed').text(alls + " Раз");
+		if (first_start == false)
+		{
+			$('#add_but').prop("disabled", false);
+			start_alls();
+			first_start = true;
+		}
 		snap.forEach(function(childSnapshot) {
 		  var key = childSnapshot.key();
 		  var childData = childSnapshot.val();
@@ -56,7 +66,23 @@ function update(){
 	  });
 
 	//  Обновляем текст
-	 $('#allsed').text(alls + " Раз");
+	 
+}
+
+function locked_button()  { //Лок молитвы
+	$('#add_but').prop("disabled", true);
+	$('#add_but').text("Перезарядка молитвы! (3 секунды)");
+	setTimeout(unlocked_button, 3000);
+}
+
+function unlocked_button()  { //Анлок молитвы
+	$('#add_but').prop("disabled", false);
+	$('#add_but').text("Помолиться!");
+}
+
+function start_alls() { //показываем кольво молитв
+	$('#allsed').addClass('alll');
+	$('#text_god').addClass('alll');
 }
 
 window.onload = function(){ // Функция при старте страницы 
