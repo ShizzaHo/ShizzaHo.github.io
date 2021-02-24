@@ -102,8 +102,12 @@ function start_alls() { //показываем кольво молитв
 window.onload = function(){ // Функция при старте страницы 
 	update(); // Обновляем 
 	document.title = title_final; // Обновим титл страницы
-	$('#info').hide();
+	
 }
+
+$(document).ready(function() {
+    $('#info').hide();
+});
 
 function timer_update(){
 	timer = timer-1;
