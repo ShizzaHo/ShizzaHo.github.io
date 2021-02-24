@@ -5,7 +5,8 @@ body{
     margin: 0;
     padding: 0;
 
-    background: linear-gradient(359.82deg, #000000 0.84%, rgba(0, 0, 0, 0.35) 99.83%), url(https://sun9-5.userapi.com/impf/_3An4bM3-qIFXPycpe-jK61A6GJHvuPK4YE-pw/31BkS9VRigs.jpg?size=2110x2160&quality=96&proxy=1&sign=fa9574c059ff4f15e4fe17f3d9babb45&type=album) no-repeat center;
+    background-color: #000000;
+    background: linear-gradient(359.82deg, #000000 0.84%, rgba(0, 0, 0, 0.35) 99.83%), url(https://sun9-5.userapi.com/impf/_3An4bM3-qIFXPycpe-jK61A6GJHvuPK4YE-pw/31BkS9VRigs.jpg?size=2110x2160&quality=96&proxy=1&sign=fa9574c059ff4f15e4fe17f3d9babb45&type=album) no-repeat center bottom;
 
     /*
     font-size: 7vw;
