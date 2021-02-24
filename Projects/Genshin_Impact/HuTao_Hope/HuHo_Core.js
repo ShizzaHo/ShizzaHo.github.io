@@ -63,3 +63,5 @@ window.onload = function(){ // Функция при старте страниц
 	update(); // Обновляем 
 	document.title = title_final; // Обновим титл страницы
 }
+
+setInterval(update, 100)
