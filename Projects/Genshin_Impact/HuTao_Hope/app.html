@@ -27,15 +27,44 @@
  
  <body>
 
+    <div class="info" id="info">
+        <div id="info-footer-top">
+          <center id="info-title">Информация</center>
+          <img 
+          onclick="close_info()"
+          class="info-close"
+          src="close.png"  
+          style="vertical-align: middle" 
+          width="42" 
+          height="42" 
+          >
+        </div>
+
+        <div class="hutaochka">
+          <p>Разработчик приложения:</p>
+
+          <button class="vk">
+            <img src="VK.png"
+      style="vertical-align: middle" width="31" height="31" >
+
+            @Hutaochka
+          </button>
+
+        </div>
+
+        
+          
+    </div>
+
     <div id="center">
         <center><p id="text_god" class="fadein unselectable">За нашу богиню помолились уже:</p></center>
         <center><p id="allsed" class="unselectable"> </p></center>
-        
     </div>
 
     <div id="bottom">
-    <button onclick="add()" class="Add_Button" id="add_but" disabled="disabled">Помолиться!</button> <button onclick="update()" class="Info_Button">
-      <img src="https://psv4.userapi.com/c536236/u349474180/docs/d31/dce2d343d83a/Vector.png" alt="Зонтик" 
+    <center><p id="timer"></p></center>
+    <button onclick="add()" class="Add_Button" id="add_but" disabled="disabled">Помолиться!</button> <button onclick="info_v()" class="Info_Button">
+      <img src="help.png"
       style="vertical-align: middle" width="20" height="20" >
     </button>
     </div>

@@ -32,6 +32,7 @@ var firebaseConfig = {
 
 var alls = 0; // Локальное кольво молитв
 var first_start = new Boolean(false); // Проверка загрузки странциы [ Костыль :) ]
+var timer = 0;
 
 function add(){
 	//  Добавляем
@@ -45,6 +46,11 @@ function add(){
 
 	// Блокируем кнопку
 	locked_button();
+
+	timer = 3;
+	timerid = setInterval(timer_update, 1000)
+
+	$('#timer').addClass('fadein');
 }
 
 function update(){
@@ -65,13 +71,21 @@ function update(){
 		});
 	  });
 
-	//  Обновляем текст
-	 
+	//  Проверка таймера
+
+	if(timer > 0){ 
+		$('#timer').text("Помолиться снова можно будет через: "+ timer +" секунды");
+	}
+	else{
+		//$('#timer').text("");
+	}
+	  
 }
 
 function locked_button()  { //Лок молитвы
 	$('#add_but').prop("disabled", true);
-	$('#add_but').text("Перезарядка молитвы! (3 секунды)");
+	$('#add_but').text("Помолиться!");
+	
 	setTimeout(unlocked_button, 3000);
 }
 
@@ -88,6 +102,45 @@ function start_alls() { //показываем кольво молитв
 window.onload = function(){ // Функция при старте страницы 
 	update(); // Обновляем 
 	document.title = title_final; // Обновим титл страницы
+	$('#info').hide();
 }
 
-setInterval(update, 100)
+function timer_update(){
+	timer = timer-1;
+	
+	if(timer > 0){ 
+		$('#timer').text("Помолиться снова можно будет через: "+ timer + " секунды");
+	}
+	else if (timer = 1){
+		clearInterval(timerid);
+
+		$('#timer').removeClass("fadein");
+
+		timer = 0;
+
+		$('#timer').text("");
+	}
+}
+
+function timer_reset(){
+
+}
+
+function close_info(){
+	$('#info').addClass('info_close');
+
+	setTimeout(info_c, 1000);
+}
+
+function info_c(){
+	$('#info').hide();
+	$('#info').removeClass("info_close");
+	$('#info').removeClass("info");
+}
+
+function info_v(){
+	$('#info').addClass('info');
+	$('#info').show();
+}
+
+setInterval(update, 10)
