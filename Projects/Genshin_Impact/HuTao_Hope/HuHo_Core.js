@@ -1,7 +1,7 @@
 
 
 //  Обозначающие переменные
-var app_version = "1.0";
+var app_version = "1.0.2";
 var name_app = "HuTao Hope";
 var title_final = name_app +" "+ app_version;
 //  ---
@@ -47,7 +47,7 @@ function add(){
 	// Блокируем кнопку
 	locked_button();
 
-	timer = 3;
+	timer = 2;
 	timerid = setInterval(timer_update, 1000)
 
 	$('#timer').addClass('fadein');
