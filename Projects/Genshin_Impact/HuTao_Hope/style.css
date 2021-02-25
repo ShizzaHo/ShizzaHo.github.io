@@ -91,16 +91,6 @@ body{
     transition: all 0.5s ease;
 }
 
-.Add_Button:hover{
-    transition: all 0.5s ease;
-    background-color: #a3a3a3;
-}
-
-.Add_Button:focus{
-    transition: all 0.5s ease;
-    background-color: #777777;
-}
-
 .Add_Button{
     transition: all 0.5s ease;
     background-color: #ffffff;
@@ -129,11 +119,6 @@ body{
     animation: slideInRight 1s;
 
     transition: all 0.5s ease;
-}
-
-.Info_Button:hover{
-    transition: all 0.5s ease;
-    background-color: #a3a3a3;
 }
 
 
