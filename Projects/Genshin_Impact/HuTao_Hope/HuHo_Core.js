@@ -86,7 +86,7 @@ function locked_button()  { //Лок молитвы
 	$('#add_but').prop("disabled", true);
 	$('#add_but').text("Помолиться!");
 	
-	setTimeout(unlocked_button, 3000);
+	setTimeout(unlocked_button, 2000);
 }
 
 function unlocked_button()  { //Анлок молитвы
