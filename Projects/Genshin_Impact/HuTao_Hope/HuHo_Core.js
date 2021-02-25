@@ -1,7 +1,7 @@
 
 
 //  Обозначающие переменные
-var app_version = "1.0.2";
+var app_version = "1.0.2.1";
 var name_app = "HuTao Hope";
 var title_final = name_app +" "+ app_version;
 //  ---
