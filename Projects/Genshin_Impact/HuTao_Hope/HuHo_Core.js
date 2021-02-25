@@ -147,4 +147,4 @@ function info_v(){
 	$('#info').show();
 }
 
-setInterval(update, 10)
+setInterval(update, 1)
