@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+
+body{
+    overflow: hidden;
+
+    color: white;
+    background-color: black;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: #000000;
+    background-attachment: fixed;  
+    
+    background: linear-gradient(359.82deg, #000000 0.84%, rgba(0, 0, 0, 0.35) 99.83%), url(image/back/one.jpg) center center no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;  
+    -khtml-user-select: none;   
+    -moz-user-select: none;     
+    -ms-user-select: none;       
+    user-select: none;    
+           
+    font-family: 'Roboto', sans-serif;
+}
+
+#center_full{
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)    
+}
+
+#bottom_full{
+    width: 100%;
+    left: 0;
+    bottom: 30px;
+    position: absolute;
+    text-align:center;
+}
+
+#loadpage{
+    position: absolute;
+
+    z-index: 100;
+    background-color: black;
+
+    left: 0; right: 0; top: 0; bottom: 0;   
+    width: 100%; height: 100%;
+}
+
+.loadcomplete{
+    animation: fadeOut 1s;
+}

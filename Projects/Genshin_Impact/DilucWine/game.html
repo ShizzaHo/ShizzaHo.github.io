@@ -1,1 +1,44 @@
+<html>
 
+    <head>
+        <meta charset=UTF-8>
+        <title></title>
+
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/authorization_page.css">
+        <link rel="stylesheet" href="styles/animate.css">
+        <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+        <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+        
+        <script src="scripts/spec_variables.js"></script> 
+        <script src="scripts/authorization_page.js"></script> 
+        <script src="scripts/firebase_auth.js"></script> 
+
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+
+        <script>
+            vkBridge.send('VKWebAppInit');
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id="center_full" style="text-align:center;">
+            <h1>Добро пожаловать</h1>
+            <h2 id="name">Error</h2>
+        </div>
+
+        <div id="bottom_full" style="text-align:center; color: rgba(255, 255, 255, 0.24)">
+            <p style="font-size: 10px; margin-bottom: 0;" id="loader_info"> </p>
+            <p style="font-size: 10px; margin-bottom: 0;">-</p>
+            <p style="font-size: 10px; margin-bottom: 0;" id="game_info">%APP_NAME% | Версия игры: 0.1</p>
+            <p style="font-size: 10px; margin-top: 0;">@Hutaochka</p>
+        </div>
+
+        <div id="loadpage"></div>   
+    </body>
+
+</html>
