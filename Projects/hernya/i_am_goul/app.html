@@ -1,19 +1,45 @@
 <html>
   
 <head>
-  <title>Я гуль. [ 0.1 ]</title>
+  <title>Я гуль. [ 0.2 ]</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 
 <body>
 
-  <h1 id="tx">Я... Гуль.</h1>
+  <h1 id="tx">Я... Гуль...</h1>
 
   <style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Spectral+SC:wght@200;600&display=swap');
+
+    /*audio {display:none;}*/
+
     body{
       color: red;
       background-color: black;
-      background-image: url(https://awesomereviews.ru/wp-content/uploads/2018/07/%D0%9A%D0%B0%D0%BD%D1%8D%D0%BA%D0%B8-%D0%9A%D1%8D%D0%BD-752x440.jpg);
-      background-size: 100%;
+      background: linear-gradient(359.82deg, #000000 0.84%, rgba(0, 0, 0, 0.35) 99.83%), url(http://viewout.ru/001/tokyo_ghoul.jpg) center right no-repeat fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover; 
+
+      padding: 1em;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-right: -50%;
+      transform: translate(-50%, -50%);
+
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;  
+      -khtml-user-select: none;   
+      -moz-user-select: none;     
+      -ms-user-select: none;       
+      user-select: none;    
+
+      font-family: 'Spectral SC', serif;
     }
 
     h1{
@@ -38,7 +64,7 @@
     {
       num = num - numex;
       document.getElementById("tx").innerHTML = num;
-      setTimeout(goul_start, 50);
+      setTimeout(goul_start, 1);
     }
     else
     {
