@@ -1,0 +1,93 @@
+<html>
+
+ <head>
+  <meta charset="utf-8" />
+  <title>HuTao Hope - @Hutaochka</title>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
+  <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+  <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+  <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+
+  <script>
+    vkBridge.send('VKWebAppInit');
+  </script>
+
+  <script src="HuHo_Core.js"></script>
+ 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <link href="animate.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
+ </head>
+ 
+ <body>
+
+    <div class="info" id="info">
+        <div id="info-footer-top">
+          <center id="info-title">Информация</center>
+          <img 
+          onclick="close_info()"
+          class="info-close"
+          src="close.png"  
+          style="vertical-align: middle" 
+          width="42" 
+          height="42" 
+          >
+        </div>
+        
+        <!--
+
+          Вот если кто-то это читает, то знайте как же я блин устал это делать!
+          Дада я начал делать через костыль, мне насрать.
+          Если хочешь доебаться до меня за хуйню ниже, то пососи хуй и иди нахуй.
+
+          С любовью Разработчик. Админ @Hutaochka <3
+
+         -->
+
+        <br><br> 
+        <p id="pading_kostyl">Молимся нашей богине Ху Тао, все вместе!</p>
+        <p id="pading_kostyl">Это приложение созданно как некий пробный ивент для нашей группы вконтакте.</p>
+        <p id="pading_kostyl">Я не знаю что сюда написать, потому впишу прекрасные слова одного из наших подписчиков:</p>
+        <p id="pading_kostyl2">
+          Как же хочется Ху Таочку как же хочется Ху Таочку как же хочется Ху Таочку как же хочется Ху Таочку как же хочется Ху Таочку как же хочется Ху Таочку как же хочется Ху Таочку как же хочется Ху Таочку как же хочется Ху Таочку АААА КАК ЖЕ ХОЧЕТСЯ...
+        </p>
+        <p id="pading_kostyl">(с) Mikoto Misaka</p>
+
+
+        <div class="hutaochka">
+          <p>Разработчик приложения:</p>
+
+          <button class="vk" onclick="window.open('https://vk.com/hutaochka','_blank')">
+            <img src="vk.png"
+      style="vertical-align: middle" width="31" height="31" >
+
+            @Hutaochka
+          </button>
+
+        </div>
+
+        
+          
+    </div>
+
+    <div id="center">
+        <center><p id="text_god" class="fadein unselectable">За нашего алкаша помолились уже:</p></center>
+        <center><p id="allsed" class="unselectable"> </p></center>
+    </div>
+
+    <div id="bottom">
+    <center><p id="timer" style="font-family: 'Roboto', sans-serif;"></p></center>
+    <button onclick="add()" class="Add_Button" id="add_but" disabled="disabled">Помолиться!</button> <button onclick="info_v()" class="Info_Button">
+      <img src="help.png"
+      style="vertical-align: middle" width="20" height="20" >
+    </button>
+    </div>
+ </body>
+ 
+</html>

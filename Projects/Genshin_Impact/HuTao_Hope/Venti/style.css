@@ -1,0 +1,241 @@
+body{
+    overflow: hidden;
+
+    color: white;
+    background-color: black;
+    
+    font-family: 'Roboto', sans-serif;
+
+    margin: 0;
+    padding: 0;
+
+    background-color: #000000;
+    background-attachment: fixed;  
+    
+    background: linear-gradient(359.82deg, #000000 0.84%, rgba(0, 0, 0, 0.35) 99.83%), url(back.jpg) center center no-repeat fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+
+    /*
+    font-size: 7vw;
+    */
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;           /* Non-prefixed version, currently
+                                    not supported by any browser */
+}
+
+.unselectable {
+    
+  }
+ 
+#center{
+        padding: 1em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%) 
+}
+
+#allsed{
+    font-size: 10vw;
+
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+}
+
+#text_god{
+    font-size: 4vw;
+    margin: 0;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+#bottom{
+    width: 100%;
+    left: 0;
+    bottom: 30px;
+    position: absolute;
+    text-align:center;
+
+    /*background-color: aquamarine;*/
+}
+
+.Add_Button{
+
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 15px;
+
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 38px;
+    outline: none;
+    border: 0;
+
+    vertical-align:bottom;
+    vertical-align:baseline;
+
+    animation: slideInLeft 1s;
+
+    transition: all 0.5s ease;
+}
+
+.Add_Button{
+    transition: all 0.5s ease;
+    background-color: #ffffff;
+}
+
+.Info_Button{
+    font-family: 'Roboto', sans-serif;
+
+    font-size: 15px;
+
+    margin-left: 3px;
+
+    height: 48px;
+
+    padding: 1em;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 38px;
+    outline: none;
+    border: 0;
+
+    vertical-align:bottom;
+    vertical-align:baseline;
+
+    animation: slideInRight 1s;
+
+    transition: all 0.5s ease;
+}
+
+
+.fadein{
+    animation: fadeIn 3s;
+}
+
+.fadeout{
+    animation: fadeOut 0.5s;
+}
+
+.alll{
+    animation: fadeInUp 1s;
+}
+
+#timer{
+    font-family: 'Roboto', sans-serif;
+}
+
+.info{
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: #FFFFFF;
+    color: black;
+    box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 24px 24px 0px 0px;
+
+    z-index: 1;
+
+    animation: fadeInUpBig 1s;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+.info_close{
+    animation: fadeOutDownBig 1s;
+}
+
+
+#info-footer-top{
+    position: absolute;
+    width: 100%;
+    height: 47px;
+    left: 0;
+    right: 0;
+    top: 0;
+
+    background: #D5D5D5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 24px 24px 0px 0px;
+}
+
+#info-title{
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    font-weight: 900;
+
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) 
+}
+
+.info-close{
+    padding: 1em;
+    position: absolute;
+    top: 50%;
+    left: 93%;
+    transform: translate(-50%, -50%) 
+}
+
+.hutaochka{
+    width: 100%;
+    padding: 8;
+    bottom: 50px;
+    position: absolute;
+
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.vk{
+    position: absolute;
+    width: 93%;
+    height: 42px;
+
+    margin-bottom: 10px;
+ 
+    background: #3B87F3;
+    color: white;
+    border-radius: 11px;
+
+    outline: none;
+    border: 0;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#pading_kostyl{
+padding-left: 5px;   
+}
+
+#pading_kostyl2{
+    padding-left: 5px;   
+    font-weight: 900;
+}
