@@ -22,7 +22,7 @@ var firebaseConfig = {
   firebase.initializeApp(firebaseConfig);
 
   var dbn = firebase.database();
-  var numb = dbn.ref('pomolilos');
+  var numb = dbn.ref('pomolilos/HuTao');
 
   //console.log(dbn);
   //console.log(numb);
