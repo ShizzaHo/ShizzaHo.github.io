@@ -3,8 +3,11 @@ var rot = 0;
 window.onload = function() {
     setInterval(rotation_loading, 1);
 
-    VK.Auth.login();
-    check_auth();
+    vkBridge.send('VKWebAppInit');
+    bridge.send("VKWebAppGetUserInfo");
+    var ebat = bridge.send("VKWebAppGetUserInfo");
+    console.log(ebat)
+    //check_auth();
 }
 
 function rotation_loading(){
