@@ -14,7 +14,7 @@ body{
 
     background-color: #000000;
     background-attachment: fixed;
-    background: url(https://shizzaho.github.io/Projects/fdfd/images/one.jpg) center center no-repeat fixed;
+    background: url(images/one.jpg) center center no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
