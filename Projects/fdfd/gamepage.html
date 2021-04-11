@@ -6,25 +6,61 @@
     <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
     <script src="scripts/FireBaseAuth.js"></script>
-    <script src="scripts/starter_page.js"></script>
     <link rel="stylesheet" href="styles/ui.css">
     <link rel="stylesheet" href="styles/ui_tech.css">
-    
+    <link rel="stylesheet" href="styles/animate.css">
+    <link rel="stylesheet" href="styles/alter_anim.css">
+
     <script>
         vkBridge.send('VKWebAppInit');
     </script>
-    
+
 </head>
 <body>
+
+    <!--
+    <div class="menu menuback_up_a">
+        <div class="menu_panel menu_up_a">
+            <div class="menu_panel_footer">
+                <p class="menu_footer_text">Меню</p>
+            </div>
+        </div>
+    </div>
+    -->
 
     <div class="top_ft">
         <div class="avatar"></div>
         <p class="top_ft_text">Имя Фамилия</p>
+        <p class="top_ft_text2">Уровень: 0 (0/100)</p>
     </div>
 
+    <div class="content">
+        <div class="box">
+            <p style="font-size: 18px; font-weight: 600; padding: 10px; margin: 15px 0px 0px 0px;">Ваши богатства:</p>
+            <div class="reso">
+                <div class="type_reso">
+                    <img src="styles/images/mora.png" width="64" height="64"> <p class="type_reso_text moras">0</p>
+                </div>
+                <div class="type_reso">
+                    <img src="styles/images/pr.png" width="64" height="64"> <p class="type_reso_text primos">0</p>
+                </div>
+                <br>
+            </div>
+    </div>
+
+        <div class="content">
+            <div class="box">
+                <p style="font-size: 18px; font-weight: 600; padding: 10px; margin: 15px 0px 0px 0px;">Улучшения:</p>
+                <div class="reso">
+                    <br>
+                </div>
+
+
+            </div>
+
     <footer class="bottom_box">
-        <button class="hutao-ui-button">Начать кормить Паймон</button>
-        <button class="hutao-ui-button" style="padding-left: 22px; padding-left: 22px; margin-left: 8px">
+        <button class="hutao-ui-button up_a">Начать кормить Паймон</button>
+        <button class="hutao-ui-button up_a" style="padding-left: 22px; padding-left: 22px; margin-left: 8px">
             Меню
         </button>
     </footer>

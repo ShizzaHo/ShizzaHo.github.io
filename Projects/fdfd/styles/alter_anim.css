@@ -1,0 +1,29 @@
+.up_a{
+    animation-duration: 1s;
+    animation-name: fadeInUp;
+    animation-direction: alternate;
+}
+
+.down_a{
+    animation-duration: 1s;
+    animation-name: fadeInDown;
+    animation-direction: alternate;
+}
+
+.inright_block{
+    animation-duration: 1s;
+    animation-name: slideInRight;
+    animation-direction: alternate;
+}
+
+.menuback_up_a{
+    animation-duration: 0.6s;
+    animation-name: fadeIn;
+    animation-direction: alternate;
+}
+
+.menu_up_a{
+    animation-duration: 0.6s;
+    animation-name: slideInUp;
+    animation-direction: alternate;
+}
