@@ -6,6 +6,7 @@
     <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
     <script src="scripts/FireBaseAuth.js"></script>
+    <script src="scripts/game.js"></script>
     <link rel="stylesheet" href="styles/ui.css">
     <link rel="stylesheet" href="styles/ui_tech.css">
     <link rel="stylesheet" href="styles/animate.css">
@@ -18,35 +19,38 @@
 </head>
 <body>
 
-    <!--
-    <div class="menu menuback_up_a">
-        <div class="menu_panel menu_up_a">
+    <div class="loader">
+    </div>
+
+    <div class="menu" onclick="close_menu()">
+        <div class="menu_panel">
             <div class="menu_panel_footer">
                 <p class="menu_footer_text">Меню</p>
             </div>
         </div>
     </div>
-    -->
 
-    <div class="top_ft">
-        <div class="avatar"></div>
-        <p class="top_ft_text">Имя Фамилия</p>
-        <p class="top_ft_text2">Уровень: 0 (0/100)</p>
-    </div>
+    <div class="page_myaccount">
 
-    <div class="content">
-        <div class="box">
-            <p style="font-size: 18px; font-weight: 600; padding: 10px; margin: 15px 0px 0px 0px;">Ваши богатства:</p>
-            <div class="reso">
-                <div class="type_reso">
-                    <img src="styles/images/mora.png" width="64" height="64"> <p class="type_reso_text moras">0</p>
+        <div class="top_ft">
+            <div class="avatar"></div>
+            <p class="top_ft_text">Имя Фамилия</p>
+            <p class="top_ft_text2">Уровень: 0 (0/100)</p>
+        </div>
+
+        <div class="content">
+            <div class="box">
+                <p style="font-size: 18px; font-weight: 600; padding: 10px; margin: 15px 0px 0px 0px;">Ваши богатства:</p>
+                <div class="reso">
+                    <div class="type_reso">
+                        <img src="styles/images/mora.png" width="64" height="64"> <p class="type_reso_text moras">0</p>
+                    </div>
+                    <div class="type_reso">
+                        <img src="styles/images/pr.png" width="64" height="64"> <p class="type_reso_text primos">0</p>
+                    </div>
+                    <br>
                 </div>
-                <div class="type_reso">
-                    <img src="styles/images/pr.png" width="64" height="64"> <p class="type_reso_text primos">0</p>
-                </div>
-                <br>
-            </div>
-    </div>
+        </div>
 
         <div class="content">
             <div class="box">
@@ -58,12 +62,43 @@
 
             </div>
 
-    <footer class="bottom_box">
-        <button class="hutao-ui-button up_a">Начать кормить Паймон</button>
-        <button class="hutao-ui-button up_a" style="padding-left: 22px; padding-left: 22px; margin-left: 8px">
-            Меню
-        </button>
-    </footer>
+        </div>
+
+        <footer class="bottom_box">
+            <button class="hutao-ui-button up_a">Начать кормить Паймон</button>
+            <button class="hutao-ui-button up_a" id="menu_button" onclick="open_menu()" style="padding-left: 22px; padding-left: 22px; margin-left: 8px">
+                Меню
+            </button>
+        </footer>
+
+    </div>
+    </div>
+
+    <div class="page_paimon">
+
+        <div class="content_paimon">
+
+        </div>
+
+        <div class="green_panel"></div>
+
+        <div class="red_panel"></div>
+
+        <footer class="bottom_box">
+            <button class="hutao-ui-button up_a" id="menu_button" onclick="start_page()" style="padding-left: 22px; padding-left: 22px; margin-left: 8px">
+                Назад
+            </button>
+        </footer>
+
+    </div>
+
+    <div class="page_top">
+        top gamer page
+    </div>
+
+    <div class="page_eventlist">
+        event list page
+    </div>
 
 </body>
 </html>

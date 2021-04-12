@@ -82,3 +82,19 @@
     top: 0; left: 0; right: 0; left: 0;
     vertical-align: middle;
 }
+
+.green_panel{
+     position: absolute;
+     width: 10%;
+     top: 0px; bottom: 0; right: 0;
+
+     background: linear-gradient(270deg, rgba(66, 255, 0, 0.46) 0%, rgba(66, 255, 0, 0) 100%);
+}
+
+.red_panel{
+    position: absolute;
+    width: 10%;
+    top: 0px; bottom: 0; left: 0;
+
+    background: linear-gradient(90deg, rgba(255, 0, 0, 0.46) 0%, rgba(255, 0, 0, 0) 100%);
+}
