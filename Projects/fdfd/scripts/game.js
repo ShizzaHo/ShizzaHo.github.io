@@ -7,6 +7,7 @@ window.onload = function() {
     $(".page_paimon").hide();
     $(".page_top").hide()
     $(".page_eventlist").hide()
+    $(".page_info").hide()
 
 }
 
@@ -41,39 +42,40 @@ function close_menu2() {
     $('.menu').hide();
 }
 
-function start_page() {
-    $(".page_myaccount").show();
-    $(".page_paimon").hide();
-    $(".page_top").hide()
-    $(".page_eventlist").hide()
-}
-
 function charge_page(index){
     if (index == 1){
         $(".page_myaccount").show();
         $(".page_paimon").hide();
         $(".page_top").hide()
         $(".page_eventlist").hide()
+        $(".page_info").hide()
     }
     else if (index == 2){
         $(".page_myaccount").hide();
         $(".page_paimon").show();
         $(".page_top").hide()
         $(".page_eventlist").hide()
+        $(".page_info").hide()
     }
     else if (index == 3){
         $(".page_myaccount").hide();
         $(".page_paimon").hide();
         $(".page_top").show()
         $(".page_eventlist").hide()
+        $(".page_info").hide()
     }
     else if (index == 4){
         $(".page_myaccount").hide();
         $(".page_paimon").hide();
         $(".page_top").hide()
         $(".page_eventlist").show()
+        $(".page_info").hide()
     }
     else if (index == 5){
-
+        $(".page_myaccount").hide();
+        $(".page_paimon").hide();
+        $(".page_top").hide()
+        $(".page_eventlist").hide()
+        $(".page_info").show()
     }
 }
