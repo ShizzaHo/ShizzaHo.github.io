@@ -3,15 +3,15 @@ window.onload = function() {
     $('.menu').hide();
     setTimeout(game_loaded, 1000)
 
-    $(".page_myaccount").hide();
-    //$(".page_paimon").hide();
+    //$(".page_myaccount").hide();
+    $(".page_paimon").hide();
     $(".page_top").hide()
     $(".page_eventlist").hide()
 
 }
 
 function game_loaded(){
-    //$(".page_myaccount").show();
+    $(".page_myaccount").show();
     $(".loader").addClass( "loaderout" );
     setTimeout(game_loaded2, 999)
 }
@@ -46,4 +46,34 @@ function start_page() {
     $(".page_paimon").hide();
     $(".page_top").hide()
     $(".page_eventlist").hide()
+}
+
+function charge_page(index){
+    if (index == 1){
+        $(".page_myaccount").show();
+        $(".page_paimon").hide();
+        $(".page_top").hide()
+        $(".page_eventlist").hide()
+    }
+    else if (index == 2){
+        $(".page_myaccount").hide();
+        $(".page_paimon").show();
+        $(".page_top").hide()
+        $(".page_eventlist").hide()
+    }
+    else if (index == 3){
+        $(".page_myaccount").hide();
+        $(".page_paimon").hide();
+        $(".page_top").show()
+        $(".page_eventlist").hide()
+    }
+    else if (index == 4){
+        $(".page_myaccount").hide();
+        $(".page_paimon").hide();
+        $(".page_top").hide()
+        $(".page_eventlist").show()
+    }
+    else if (index == 5){
+
+    }
 }
