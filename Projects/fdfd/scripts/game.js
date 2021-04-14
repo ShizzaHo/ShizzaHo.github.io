@@ -1,4 +1,5 @@
 window.onload = function() {
+    sandbox()
     $(".loader").remove()
     $('.menu').hide();
     setTimeout(game_loaded, 1000)
@@ -9,6 +10,7 @@ window.onload = function() {
     $(".page_eventlist").hide()
     $(".page_info").hide()
 
+    charge_page(2)
 }
 
 function game_loaded(){
@@ -60,15 +62,15 @@ function charge_page(index){
     else if (index == 3){
         $(".page_myaccount").hide();
         $(".page_paimon").hide();
-        $(".page_top").show()
-        $(".page_eventlist").hide()
+        $(".page_top").hide()
+        $(".page_eventlist").show()
         $(".page_info").hide()
     }
     else if (index == 4){
         $(".page_myaccount").hide();
         $(".page_paimon").hide();
-        $(".page_top").hide()
-        $(".page_eventlist").show()
+        $(".page_top").show()
+        $(".page_eventlist").hide()
         $(".page_info").hide()
     }
     else if (index == 5){

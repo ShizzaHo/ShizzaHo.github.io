@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 /*::-webkit-scrollbar {display:none;}*/
+body{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+img{
+    pointer-events: none
+}
 
 .hutao-ui-button{
     height: 45px;
@@ -109,4 +121,32 @@
 
 .element_menu:hover{
     background: #f6f6f6;
+}
+
+.content_paimon{
+    display: flex;
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.paimon_emotion{
+    text-align: center;
+    color: #FFFFFF;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.paimon_eat{
+    text-align: center;
+    color: #FFFFFF;
+
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+
+    margin-top: 42px;
 }

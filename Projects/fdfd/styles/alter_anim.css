@@ -18,6 +18,12 @@
     animation-direction: alternate;
 }
 
+.upd_a{
+    animation-duration: 1s;
+    animation-name: fadeOutUp;
+    animation-direction: alternate;
+}
+
 .down_a{
     animation-duration: 1s;
     animation-name: fadeInDown;
