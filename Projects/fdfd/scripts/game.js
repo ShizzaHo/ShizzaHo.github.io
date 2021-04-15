@@ -87,7 +87,7 @@ function charge_page(index){
 }
 
 $(function() {
-    $(".content_paimon").swipe( { swipeStatus:swipe2, allowPageScroll:"horizontal"} );
+    $(".content_paimon").swipe( { swipeStatus:swipe2} );
 
     function swipe2(event, phase, direction, distance) {
 
