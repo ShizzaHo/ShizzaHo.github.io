@@ -12,6 +12,9 @@ function debug_food(){
 
 function generation_food(){
 
+    $('.paimon_eat').show();
+    $('.paimon_eat_2').hide();
+
     var rand = Math.floor((Math.random() * 4) + 1);
 
     $('.paimon').attr("src","styles/images/paimon_1.png");
@@ -52,24 +55,40 @@ function generation_food(){
 }
 
 function check_food(check){
+
+    $('.paimon_eat').hide();
+
     if (check == 1){
         if (food_type == 1){
             $('.paimon').attr("src","styles/images/paimon_2.png");
             $('#paimon_text').text("Еще как съедобно!");
+
+            $('.paimon_eat_2').show();
+            $('#food_fin_img').attr("src","styles/images/yesing.png");
+
         }
         else if (food_type == 0){
             $('.paimon').attr("src","styles/images/paimon_3.png");
             $('#paimon_text').text("Эй, Чем это ты решил накормить Паймон?");
+
+            $('.paimon_eat_2').show();
+            $('#food_fin_img').attr("src","styles/images/noting.png");
         }
     }
     else if (check == 0){
         if (food_type == 1){
             $('.paimon').attr("src","styles/images/paimon_3.png");
             $('#paimon_text').text("Кажется, ты что-то перепутал...");
+
+            $('.paimon_eat_2').show();
+            $('#food_fin_img').attr("src","styles/images/noting.png");
         }
         else if (food_type == 0){
             $('.paimon').attr("src","styles/images/paimon_4.png");
             $('#paimon_text').text("Да, лучше не есть это...");
+
+            $('.paimon_eat_2').show();
+            $('#food_fin_img').attr("src","styles/images/yesing.png");
         }
     }
 

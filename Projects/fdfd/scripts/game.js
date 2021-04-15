@@ -1,6 +1,7 @@
 var level = 0;
 
 window.onload = function() {
+    $('.paimon_eat_2').hide();
     $('.level_base').hide();
     $(".loader").remove()
     $('.menu').hide();
@@ -92,10 +93,10 @@ $(function() {
     function swipe2(event, phase, direction, distance) {
 
         if (direction == "left"){
-            $("#food_img").css({ "margin-right" : distance*10+"px"});
+            $("#food_img").css({ "margin-right" : distance*7+"px"});
         }
         if (direction == "right"){
-            $("#food_img").css({ "margin-left" : distance*10+"px"});
+            $("#food_img").css({ "margin-left" : distance*7+"px"});
         }
 
         if (phase == "cancel"){
@@ -103,11 +104,10 @@ $(function() {
         }
         if (phase == "end"){
             $("#food_img").css({ "margin" : "0px"});
-
-            if(direction == "left" & distance > 1){
+            if(direction == "left"){
                 check_food(0)
             }
-            else if(direction == "right" & distance > 1){
+            else if(direction == "right"){
                 check_food(1)
             }
         }
