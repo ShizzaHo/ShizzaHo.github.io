@@ -1,5 +1,7 @@
+var level = 0;
+
 window.onload = function() {
-    sandbox()
+    $('.level_base').hide();
     $(".loader").remove()
     $('.menu').hide();
     setTimeout(game_loaded, 1000)
@@ -11,6 +13,8 @@ window.onload = function() {
     $(".page_info").hide()
 
     charge_page(2)
+
+    debug_food();
 }
 
 function game_loaded(){
@@ -81,3 +85,32 @@ function charge_page(index){
         $(".page_info").show()
     }
 }
+
+$(function() {
+    $(".content_paimon").swipe( { swipeStatus:swipe2, allowPageScroll:"horizontal"} );
+
+    function swipe2(event, phase, direction, distance) {
+
+        if (direction == "left"){
+            $("#food_img").css({ "margin-right" : distance*10+"px"});
+        }
+        if (direction == "right"){
+            $("#food_img").css({ "margin-left" : distance*10+"px"});
+        }
+
+        if (phase == "cancel"){
+            $("#food_img").css({ "margin" : "0px"});
+        }
+        if (phase == "end"){
+            $("#food_img").css({ "margin" : "0px"});
+
+            if(direction == "left" & distance > 1){
+                check_food(0)
+            }
+            else if(direction == "right" & distance > 1){
+                check_food(1)
+            }
+        }
+    }
+
+});
