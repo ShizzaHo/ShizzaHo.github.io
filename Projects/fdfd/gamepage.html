@@ -6,12 +6,15 @@
     <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
     <script src="scripts/FireBaseAuth.js"></script>
+    <script src="scripts/libs/TouchSwipe-Jquery-Plugin-master/jquery.touchSwipe.min.js"></script>
     <script src="scripts/game.js"></script>
     <script src="scripts/sandbox.js"></script>
+    <script src="scripts/paimon_eat_core/main.js"></script>
     <link rel="stylesheet" href="styles/ui.css">
     <link rel="stylesheet" href="styles/ui_tech.css">
     <link rel="stylesheet" href="styles/animate.css">
     <link rel="stylesheet" href="styles/alter_anim.css">
+
 
     <script>
         vkBridge.send('VKWebAppInit');
@@ -112,11 +115,11 @@
         <div class="content_paimon">
             <div class="paimon_emotion">
                 <img src="styles/images/paimon_1.png" class="paimon" width="226" height="247">
-                <p style="margin-top: 8px;">Вопрос от паймон</p>
+                <p id="paimon_text" style="margin-top: 8px;">Вопрос от паймон</p>
             </div>
             <div class="paimon_eat">
-                <img src="styles/images/pr.png" class="" width="139" height="133">
-                <p style="margin-top: 8px;">Название еды</p>
+                <img id="food_img" src="styles/images/food/apple.png" width="139" height="133" style="margin-left: 0px;">
+                <p id="food_name" style="margin-top: 8px;">Название еды</p>
             </div>
         </div>
 
