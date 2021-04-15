@@ -142,6 +142,7 @@ img{
 }
 
 .paimon_eat{
+    position: relative;
     text-align: center;
     color: #FFFFFF;
 
