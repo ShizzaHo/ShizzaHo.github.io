@@ -63,6 +63,7 @@ body{
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     background: url(images/one.jpg) center center no-repeat;
+    background-size: 100%;
     border: 3px solid #FFFFFF;
 
     height: 100px;
