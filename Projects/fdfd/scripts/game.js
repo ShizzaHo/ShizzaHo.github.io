@@ -1,11 +1,25 @@
 var level = 0;
 
+vkBridge.send('VKWebAppInit');
+const user = vkBridge.send("VKWebAppGetUserInfo");
+
+//---
+
+var ID = ""; var Level = "";
+var Score = ""; var Score_next = "";
+var Fname = ""; var Lname = "";
+var Mora = ""; var Primo = "";
+var Avatarka = "";
+var Stats = "";
+
+//---
+
 window.onload = function() {
     $('.paimon_eat_2').hide();
+    $('.level_nexter').hide();
     $('.level_base').hide();
-    $(".loader").remove()
+    $(".loader").remove();
     $('.menu').hide();
-    setTimeout(game_loaded, 1000)
 
     //$(".page_myaccount").hide();
     $(".page_paimon").hide();
@@ -13,19 +27,63 @@ window.onload = function() {
     $(".page_eventlist").hide()
     $(".page_info").hide()
 
-    charge_page(2)
+    //charge_page(2)
 
     debug_food();
 }
+
+Promise.resolve(user).then(function(value) {
+
+    ID = value.id;
+    Avatarka = value.photo_100;
+
+    $(".avatar").css("background", 'url("' + Avatarka + '") center center no-repeat')
+    $(".avatar").css("background-size", '100%')
+
+    setTimeout(game_loaded, 1000)
+
+});
+
 
 function game_loaded(){
     $(".page_myaccount").show();
     $(".loader").addClass( "loaderout" );
     setTimeout(game_loaded2, 999)
+
+    set_local_data();
 }
 
 function game_loaded2(){
     $(".loader").remove()
+}
+
+    function set_local_data(){
+
+        database.ref('/UserData/'+ID).on("value", function(snap) {
+            Udata = snap.val();
+            setuserinterfasedata()
+        });
+
+        database.ref('/UserData/'+ID+"/Stats").on("value", function(snap) {
+            Stats = snap.val();
+        });
+
+    }
+
+
+function setuserinterfasedata() {
+    Fname = Udata.Name;
+    Lname = Udata.LastName;
+    Level = Udata.Level;
+    Score = Udata.Score;
+    Score_next = Udata.next_level_score;
+    Mora = Udata.Mora;
+    Primo = Udata.Primo;
+
+    $(".top_ft_text").text(Fname+" "+Lname);
+    $(".top_ft_text2").text("Уровень: " + Level + " ("+Score+"/"+Score_next+")");
+    $(".moras").text(Mora);
+    $(".primos").text(Primo);
 }
 
 function open_menu() {

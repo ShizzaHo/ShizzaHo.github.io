@@ -60,11 +60,21 @@ function check_base_2(){
             $('.text2').text("Добро пожаловать, "+Fname+" "+Lname+"!");
             database.ref('/UserData/'+ID).set({
                 Name: Fname,
-                Level: 0,
-                Mora: 0,
-                Primo: 0,
+                Level: 1,
+                Mora: 1000,
+                Primo: 100,
+                Score: 0,
                 Banned: 0,
                 LastName: Lname,
+                next_level_score: 10,
+                Stats: {
+                    Food_eats: 0,
+                    Food_eats_yes: 0,
+                    Food_eats_no: 0,
+                    Food_eats_ivent: 0,
+                    MoraUsed: 0,
+                    PrimoUsed: 0,
+                },
                 Special: {
                     first_join: 0,
                 }

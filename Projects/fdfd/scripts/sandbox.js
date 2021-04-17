@@ -1,6 +1,3 @@
-var id = 0;
-var id_max = 50;
-
 function sandbox(){
     $('.level_base').removeClass("upd_a");
     $('.level_base').addClass("down_a");
@@ -8,7 +5,9 @@ function sandbox(){
     $('.level_base').show();
 }
 
-function add_bs(){
+function add_bs(id, id_max){
+    var id = 0;
+    var id_max = 50;
 
     if (id_max != id){
         $('.level_shar').css("width", id+"%");
