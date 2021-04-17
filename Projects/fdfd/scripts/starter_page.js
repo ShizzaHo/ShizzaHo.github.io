@@ -90,5 +90,5 @@ function check_base_2(){
 }
 
 function jointogame(){
-    document.location.href = 'gamepage.html';
+    window.location.replace("gamepage.html");
 }
