@@ -14,6 +14,9 @@ var Stats = "";
 
 //---
 
+var usr;
+var scr;
+
 window.onload = function() {
     $('.paimon_eat_2').hide();
     $('.level_nexter').hide();
@@ -27,7 +30,9 @@ window.onload = function() {
     $(".page_eventlist").hide()
     $(".page_info").hide()
 
-    //charge_page(2)
+    TOP_Loading()
+
+    //charge_page(5)
 
     debug_food();
 }
@@ -35,13 +40,9 @@ window.onload = function() {
 Promise.resolve(user).then(function(value) {
 
     ID = value.id;
-    Avatarka = value.photo_100;
-
-    $(".avatar").css("background", 'url("' + Avatarka + '") center center no-repeat')
-    $(".avatar").css("background-size", '100%')
+    Avatarka = value.photo_200;
 
     setTimeout(game_loaded, 1000)
-
 });
 
 
@@ -81,9 +82,12 @@ function setuserinterfasedata() {
     Primo = Udata.Primo;
 
     $(".top_ft_text").text(Fname+" "+Lname);
-    $(".top_ft_text2").text("Уровень: " + Level + " ("+Score+"/"+Score_next+")");
+    $(".top_ft_text2").text("Постоянные клиенты: " + Score);
     $(".moras").text(Mora);
     $(".primos").text(Primo);
+
+    $(".avatar").css("background", 'url("' + Avatarka + '") center center no-repeat')
+    $(".avatar").css("background-size", '100%')
 }
 
 function open_menu() {
@@ -135,6 +139,9 @@ function charge_page(index){
         $(".page_top").show()
         $(".page_eventlist").hide()
         $(".page_info").hide()
+
+        //$('.topL2').empty();
+        //TOP_Loading()
     }
     else if (index == 5){
         $(".page_myaccount").hide();
