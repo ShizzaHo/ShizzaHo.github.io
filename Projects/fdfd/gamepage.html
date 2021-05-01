@@ -7,13 +7,15 @@
     <script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
     <script src="scripts/FireBaseAuth.js"></script>
     <script src="scripts/libs/TouchSwipe-Jquery-Plugin-master/jquery.touchSwipe.min.js"></script>
-    <script src="scripts/game.js"></script>
     <script src="scripts/sandbox.js"></script>
     <script src="scripts/paimon_eat_core/main.js"></script>
+    <script src="scripts/event_logic.js"></script>
     <link rel="stylesheet" href="styles/ui.css">
     <link rel="stylesheet" href="styles/ui_tech.css">
     <link rel="stylesheet" href="styles/animate.css">
     <link rel="stylesheet" href="styles/alter_anim.css">
+
+    <script src="scripts/game.js"></script>
 
     <meta name="viewport" content="width=device-width, user-scalable=no">
 
@@ -45,12 +47,16 @@
                     Покормить Паймон
                 </div>
 
-                <div class="element_menu" onclick="charge_page(3)">
-                    Ивенты
+                <div class="element_menu" onclick="charge_page(0)">
+                    Ивенты ( Скоро )
                 </div>
 
                 <div class="element_menu" onclick="charge_page(4)">
                     Топ кормильцев
+                </div>
+
+                <div class="element_menu" onclick="charge_page(0)">
+                    Обмен клиентами ( Скоро )
                 </div>
 
                 <div class="element_menu" onclick="charge_page(5)">
@@ -65,7 +71,7 @@
         <div class="top_ft">
             <div class="avatar"></div>
             <p class="top_ft_text">Имя Фамилия</p>
-            <p class="top_ft_text2">Уровень: 0 (0/100)</p>
+            <p class="top_ft_text2">Постоянные клиенты: 0</p>
         </div>
 
         <div class="content">
@@ -84,10 +90,10 @@
 
         <div class="content">
             <div class="box">
-                <p style="font-size: 18px; font-weight: 600; padding: 10px; margin: 15px 0px 0px 0px;">Улучшения:</p>
+                <!--<p style="font-size: 18px; font-weight: 600; padding: 10px; margin: 15px 0px 0px 0px;">Улучшения:</p>
                 <div class="reso">
                     <br>
-                </div>
+                </div>-->
 
 
             </div>
@@ -117,7 +123,7 @@
         <div class="content_paimon">
             <div class="paimon_emotion">
                 <img src="styles/images/paimon_1.png" class="paimon" width="226" height="247">
-                <p id="paimon_text" style="margin-top: 8px; font-size: calc(34px + .5vw); text-align: center;">Вопрос от паймон</p>
+                <p id="paimon_text" style="margin-top: 8px; font-size: calc(30px + .5vw); text-align: center;">Вопрос от паймон</p>
             </div>
             <div class="paimon_eat">
                 <img id="food_img" src="styles/images/food/apple.png" width="139" height="133" style="margin-left: 0px;">
@@ -152,16 +158,6 @@
 
     </div>
 
-    <div class="page_top">
-        top gamer page (in dev...)
-
-        <footer class="bottom_box">
-            <button class="hutao-ui-button up_a" id="menu_button" onclick="charge_page(1)" style="padding-left: 22px; padding-left: 22px; margin-left: 8px">
-                Назад
-            </button>
-        </footer>
-    </div>
-
     <div class="page_eventlist">
         event list page (in dev...)
 
@@ -174,13 +170,63 @@
     </div>
 
     <div class="page_info">
-        info page (in dev...)
+
+        <div class="info_box" style="position: fixed;top:0;bottom:0; left:0; right: 0; overflow: auto;">
+
+            <div class="top_element_panel2">
+                <img src="styles/images/pr.png" width="256" height="256" style="align-self: center;">
+                <p style="text-align: center; font-weight: bold;">Кушать подано, Паймон!</p>
+                <p style="font-size: 18px; text-align: center; font-weight: normal; margin-top: 0;">Версия: 1.0</p>
+            </div>
+
+            <div class="top_element_panel2">
+                <p  style="font-size: 28px; font-weight: bold; margin-top: 0; margin-bottom: 8px;">Об игре</p>
+                <p style="margin-top: 0; font-size: 22px;"><b>Кушать подано, Паймон!</b> - Проект созданный специально для нашей группы ВКонтакте.</p>
+                <p style="margin-top: 0; font-size: 22px;">В этой игре вам придется собирать постоянных клиентов, и соревноваться с другими игроками в их количестве!</p>
+                <p style="margin-top: 0; font-size: 22px;">Лучший в мире компаньон - Паймон, поможет вам выбрать съедобную еду, которую вы и подадите вашим клиентам.</p>
+                <p style="margin-top: 0; font-size: 22px;">Если вы выберите правильную еду то у вас появится новый постоянный клиент, а если же нет, то постоянный клиент уйдет от вас</p>
+                <p style="margin-top: 0; font-size: 22px;">Благодаря силе бездны, и схемам господина Дилюка, в будущем вы сможете обмениваться постоянными клиентами, однако, цену за это, вам предстоить указать самим!</p>
+            </div>
+
+            <div class="top_element_panel2">
+                <p style="font-weight: bold; margin-top: 0; margin-bottom: 8px;">Ссылки</p>
+                <p style="margin-top: 0; font-size: 22px;" id="urls"><a href="https://vk.com/hutaochka">Наша группа в VK</a></a></p>
+                <p style="margin-top: 0; font-size: 22px;" id="urls"><a href="https://www.tiktok.com/@hutaochka">Наш канал в TikTok</a></p>
+            </div>
+            <br><br><br><br>
+        </div>
 
         <footer class="bottom_box">
             <button class="hutao-ui-button up_a" id="menu_button" onclick="charge_page(1)" style="padding-left: 22px; padding-left: 22px; margin-left: 8px">
                 Назад
             </button>
         </footer>
+
+    </div>
+
+    <div class="page_top">
+        <div class="top_ft">
+            <p style="margin-top: 120px; margin-left: 14px; color: white; font-family: 'Raleway', sans-serif; font-size: 24px; font-weight: 600;">Топ кормильцев</p>
+        </div>
+
+        <div class="toplist">
+
+        <div class="topL2" style="position: fixed;top:200px;bottom:0; left:0; right: 0; overflow: auto;">
+            <!--<div class="top_element_panel">
+                <p id="mesto">N Место</p>
+                <div class="top_element_panel_info">
+                    <p id="mesto2">0</p>
+                    <p STYLE="color: #b7b7b7; font-family: 'Raleway', sans-serif; font-size: 10px;">Постоянных посетителей</p>
+                </div>
+            </div>-->
+        </div>
+
+        <footer class="bottom_box">
+            <button class="hutao-ui-button up_a" id="menu_button" onclick="charge_page(1)" style="padding-left: 22px; padding-left: 22px; margin-left: 8px">
+                Назад
+            </button>
+        </footer>
+    </div>
 
     </div>
 
